@@ -16,7 +16,7 @@ user@machine:~$ cd easyWP-RCE && chmod +x easyWP-RCE.py
 user@machine:~$ ./easyWP-RCE.py target-wp.com
 ```
 
-![Screenshot]('screen/Screenshot%202021-09-04%2021:08:47.png')
+![Screenshot]('screen/screen.png')
 
 ## Contributing
 Did you find another way to achieve an easy RCE in WordPress based sites ? you're welcome to contribute to this small script and add your own logic in it, thanks for sharing !
