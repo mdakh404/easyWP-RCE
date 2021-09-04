@@ -16,6 +16,7 @@ def get_args():
 
 args = get_args()
 
+
 if ('http://' or 'https://') not in args.target:
     args.target = 'http://' + args.target
 
@@ -38,8 +39,8 @@ def main():
 
         req = requests.get(f'{args.target}/wp-admin/install.php')
         if req.status_code == 200:
-            print(colored('\n[+] Target file is found ! Proccessing it ...', 'green', attrs=['bold']))
-            soup = BeautifulSoup(req.text, 'html.parse')
+            print(colored('\n[+] Target file is found ! Processing it ...', 'green', attrs=['bold']))
+            soup = BeautifulSoup(req.text, 'html.parser')
             if 'WordPress' not in soup.title.get_text():
                 print(colored(f"[-] Error: {args.target} isn't a WordPress site !", 'red', attrs=['bold']))
             
@@ -62,7 +63,7 @@ def main():
          exit()
          
     except:
-         print('\n[-] Error: Unkown error has been occured, check your connection/argument.')
+         print('\n[-] Error: Unknown error has been occured, check your connection/argument.')
     
 
 
