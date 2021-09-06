@@ -18,5 +18,12 @@ user@machine:~$ ./easyWP-RCE.py target-wp.com
 
 ![](screen/screen.png)
 
+## Automation:
+Right ! you have a list of detected-WordPress-based sites and you need to find that easy RCE, with bash, everything is easier than before :)
+
+```bash
+user@machine:~$ for site in wp-sites; do python3 easyWP-RCE.py $site; done
+```
+
 ## Contributing
 Did you find another way to achieve an easy RCE in WordPress based sites ? you're welcome to contribute to this small script and add your own logic in it, thanks for sharing !
